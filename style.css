@@ -38,12 +38,12 @@ h1 {
   font-weight: 800;
   color: var(--gold);
   letter-spacing: 0.2rem;
+  margin-bottom: 0.5rem;
 }
 
-p {
+.container p {
   margin-top: 1rem;
   font-size: 1.1rem;
-  color: var(--white);
   opacity: 0.85;
 }
 
