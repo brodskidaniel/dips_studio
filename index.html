@@ -9,100 +9,94 @@
 
 <body>
 
+  <!-- HEADER / NAV -->
+  <header class="header">
+    <div class="nav-container">
+      <div class="logo">DIPS</div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="https://discord.gg/DIN-INVITE" target="_blank" class="nav-btn">Discord</a>
+      </nav>
+    </div>
+  </header>
+
   <!-- HERO -->
   <section class="hero">
-    <div class="container">
-      <h1>DIPS</h1>
-
-      <p class="subtitle">Digital Interactive Production Studio</p>
-
-      <p class="description">
-        We design and develop interactive digital experiences — from games and simulations
-        to custom systems and creative technology.
+    <div class="hero-content">
+      <h1>Digital Interactive<br>Production Studio</h1>
+      <p>
+        We design and develop interactive digital experiences —
+        from games and simulations to custom systems and creative technology.
       </p>
 
-      <div class="buttons">
-        <a
-          href="https://discord.gg/DIN-INVITE"
-          class="btn primary glow"
-          target="_blank"
-          data-track="Discord Button"
-        >
-          Join Discord
-        </a>
-
-        <a
-          href="#projects"
-          class="btn secondary"
-          data-track="Projects Button"
-        >
-          Projects
-        </a>
-
-        <a
-          href="#projects"
-          class="btn fun"
-        >
-          ▶ Play
-        </a>
-      </div>
-
-      <p class="status">
-        Currently building experimental systems & interactive projects.
-      </p>
-
-      <div class="scroll-hint">↓ Explore</div>
-    </div>
-  </section>
-
-  <!-- SECTION TWO -->
-  <section id="projects" class="section">
-    <h2>What we build</h2>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Systems</h3>
-        <p>Custom-built systems designed for scalability and experimentation.</p>
-      </div>
-
-      <div class="card">
-        <h3>Games</h3>
-        <p>Interactive worlds, simulations, and playful experiences.</p>
-      </div>
-
-      <div class="card">
-        <h3>Tools</h3>
-        <p>Creative tools that invite interaction and curiosity.</p>
-      </div>
-
-      <div class="card special">
-        <h3>Experiments</h3>
-        <p>Strange ideas, prototypes, and things we build just because it’s fun.</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn primary">View Projects</a>
+        <a href="https://discord.gg/DIN-INVITE" target="_blank" class="btn secondary">Join Discord</a>
       </div>
     </div>
   </section>
 
-  <!-- CLICK TRACKING -->
-  <script>
-    const WEBHOOK_URL = "DIN_WEBHOOK_URL_HÄR";
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <h2>What We Do</h2>
 
-    document.querySelectorAll("[data-track]").forEach((el) => {
-      el.addEventListener("click", () => {
-        fetch(WEBHOOK_URL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            content:
-              "🔔 **DIPS Website Click**\n" +
-              "Button: " +
-              el.dataset.track +
-              "\nTime: " +
-              new Date().toLocaleString(),
-          }),
-        });
-      });
-    });
-  </script>
+    <div class="grid">
+      <div class="card">
+        <h3>System Development</h3>
+        <p>Robust, scalable systems built for long-term use and experimentation.</p>
+      </div>
+
+      <div class="card">
+        <h3>Games & Simulations</h3>
+        <p>Interactive worlds, prototypes, and simulations with depth and purpose.</p>
+      </div>
+
+      <div class="card">
+        <h3>Creative Technology</h3>
+        <p>Tools, interfaces, and experimental tech that invite interaction.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section alt">
+    <h2>Projects & Experiments</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Experimental Systems</h3>
+        <p>Custom backend and gameplay systems built for flexibility.</p>
+      </div>
+
+      <div class="card">
+        <h3>Interactive Prototypes</h3>
+        <p>Playable concepts and technical experiments.</p>
+      </div>
+
+      <div class="card">
+        <h3>Internal Tools</h3>
+        <p>Tools we build to speed up and enhance creative workflows.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2>About DIPS</h2>
+    <p class="about-text">
+      DIPS is a digital interactive production studio focused on building meaningful,
+      experimental, and technically solid digital experiences.
+      We value structure, creativity, and curiosity — and we build things because
+      we love the process.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© DIPS – Digital Interactive Production Studio</p>
+  </footer>
 
 </body>
 </html>
