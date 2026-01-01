@@ -28,7 +28,7 @@ body {
 
 .container {
   text-align: center;
-  max-width: 720px;
+  max-width: 760px;
   padding: 2rem;
 }
 
@@ -36,4 +36,125 @@ h1 {
   font-size: 4rem;
   font-weight: 800;
   color: var(--gold);
-  letter-spacing: 0.25
+  letter-spacing: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  opacity: 0.85;
+}
+
+.description {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* BUTTONS */
+.buttons {
+  margin-top: 2.2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: var(--gold);
+  color: #000;
+}
+
+.btn.secondary {
+  border: 1px solid var(--gold);
+  color: var(--gold);
+}
+
+.btn.fun {
+  border: 1px dashed rgba(212,175,55,0.6);
+  color: var(--gold);
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.02);
+}
+
+.glow:hover {
+  box-shadow: 0 0 20px rgba(212,175,55,0.5);
+}
+
+/* STATUS + SCROLL */
+.status {
+  margin-top: 1.6rem;
+  font-size: 0.85rem;
+  opacity: 0.45;
+  letter-spacing: 0.05em;
+}
+
+.scroll-hint {
+  margin-top: 3rem;
+  font-size: 0.75rem;
+  opacity: 0.4;
+  animation: float 2.5s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+  100% { transform: translateY(0); }
+}
+
+/* SECTION TWO */
+.section {
+  padding: 6rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  letter-spacing: 0.12em;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  border: 1px solid rgba(212,175,55,0.15);
+  padding: 2rem;
+  border-radius: 18px;
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212,175,55,0.4);
+}
+
+.card h3 {
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+
+.card p {
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+.card.special {
+  background: rgba(212,175,55,0.05);
+}
