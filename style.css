@@ -1,6 +1,6 @@
 /* DIPS — Digital Interactive Production Studio */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap");
 
 :root {
   --black: #0b0b0c;
@@ -15,12 +15,13 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background: var(--black);
   color: var(--white);
   display: flex;
@@ -31,6 +32,7 @@ body {
 .container {
   text-align: center;
   padding: 2rem;
+  max-width: 720px;
 }
 
 h1 {
@@ -41,14 +43,16 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
-.container p {
-  margin-top: 1rem;
-  font-size: 1.1rem;
+.subtitle {
+  font-size: 1rem;
   opacity: 0.85;
 }
 
-.accent {
-  color: var(--fire);
+.description {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.8;
 }
 
 .buttons {
@@ -82,4 +86,11 @@ h1 {
 
 .btn.secondary:hover {
   background: rgba(212, 175, 55, 0.1);
+}
+
+.status {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  opacity: 0.55;
+  letter-spacing: 0.05em;
 }
