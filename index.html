@@ -5,59 +5,51 @@
   <title>DIPS — Digital Interactive Production Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<header class="header">
-  <div class="header-inner">
-
-    <nav class="nav left">
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#workflow">Teamwork</a>
-    </nav>
-
-    <div class="brand" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">
-      DIPS
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-inner">
+    <div class="nav-left">
+      <a href="#apply" class="logo">DIPS</a>
     </div>
 
-    <nav class="nav right">
-      <a href="#about">About</a>
-      <a href="https://discord.gg/Dd85gp6Vq4" target="_blank" class="discord">
-        Join Discord
-      </a>
+    <nav class="nav-center">
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
     </nav>
 
+    <div class="nav-right">
+      <a href="#about">About</a>
+      <a class="btn-outline" href="https://discord.gg/Dd85gp6Vq4" target="_blank">Discord</a>
+    </div>
   </div>
 </header>
-
-<main>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
+    <h1>Digital Interactive<br/>Production Studio</h1>
 
-    <h1>
-      Digital Interactive<br>
-      Production Studio
-    </h1>
-
-    <p class="hero-lead">
-      A passion-driven studio focused on building playful, technically solid and
-      meaningful digital experiences — games, systems, and experimental projects.
+    <p class="hero-sub">
+      A passion-driven studio building playful, creative and technically solid
+      digital experiences — together.
     </p>
 
-    <div class="hero-cta">
-      <a href="#projects" class="btn primary">Explore Projects</a>
-      <a href="#apply" class="btn ghost">Work With Me</a>
+    <div class="hero-buttons">
+      <a href="#projects" class="btn-primary">Explore Projects</a>
+      <a href="#apply" class="btn-secondary">Work With Me</a>
     </div>
 
-    <div class="scroll-hint">
+    <div class="scroll-indicator">
       <span>Scroll</span>
-      <div class="chevron"></div>
+      <div class="arrow"></div>
     </div>
-
   </div>
 </section>
 
@@ -68,152 +60,89 @@
   <div class="cards">
     <div class="card">
       <h3>System Development</h3>
-      <p>
-        Scalable, well-structured systems designed for long-term growth and experimentation.
-      </p>
+      <p>Scalable systems built for long-term experimentation and growth.</p>
     </div>
 
     <div class="card">
       <h3>Games & Simulations</h3>
-      <p>
-        Interactive worlds and mechanics built to feel alive, responsive and fun.
-      </p>
+      <p>Playable worlds, mechanics and simulations that feel alive.</p>
     </div>
 
     <div class="card">
       <h3>Creative Technology</h3>
-      <p>
-        Tools, interfaces and experimental tech that blend creativity with structure.
-      </p>
+      <p>Tools and experiments blending creativity with structure.</p>
     </div>
+  </div>
+</section>
+
+<!-- TEAMWORK -->
+<section class="section soft">
+  <h2>How We Work Together</h2>
+
+  <div class="timeline">
+    <div class="step">We learn to collaborate, respect each other and enjoy the process.</div>
+    <div class="step">We build flow and trust — working solo or in small groups.</div>
+    <div class="step">Projects grow naturally, without pressure or money focus.</div>
+    <div class="step">Games release. Income may come later — slowly and responsibly.</div>
+    <div class="step">A larger flagship project begins when the time is right.</div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="section soft">
+<section id="projects" class="section">
   <h2>Projects & Experiments</h2>
 
   <div class="cards">
-    <div class="card accent">
+    <div class="card">
       <h3>Experimental Systems</h3>
-      <p>
-        Backend logic, gameplay systems and mechanics built for flexibility.
-      </p>
+      <p>Custom backend and gameplay systems built for flexibility.</p>
     </div>
 
-    <div class="card accent">
-      <h3>Playable Prototypes</h3>
-      <p>
-        Rapid concepts, tests and experiments exploring new ideas.
-      </p>
+    <div class="card">
+      <h3>Interactive Prototypes</h3>
+      <p>Rapid playable concepts exploring new ideas.</p>
     </div>
 
-    <div class="card accent">
-      <h3>Released Games</h3>
-      <p>
-        Multiple small games already released — learning from real players.
-      </p>
+    <div class="card">
+      <h3>Internal Tools</h3>
+      <p>Tools that improve workflow, speed and creativity.</p>
     </div>
-  </div>
-</section>
-
-<!-- WORKFLOW / TEAMWORK -->
-<section id="workflow" class="section workflow">
-  <h2>How We Work Together</h2>
-
-  <p class="workflow-intro">
-    DIPS grows slowly and intentionally.  
-    We focus on trust, communication and long-term teamwork.
-  </p>
-
-  <div class="timeline">
-
-    <div class="step">
-      <span class="step-number">01</span>
-      <h3>Getting Along & Learning Together</h3>
-      <p>
-        We start by getting to know each other.
-        Learning how to communicate, cooperate and work smoothly without friction.
-      </p>
-    </div>
-
-    <div class="step">
-      <span class="step-number">02</span>
-      <h3>Finding the Team Flow</h3>
-      <p>
-        We build rhythm and respect.
-        Everyone works at their own pace, solo or in small groups.
-      </p>
-    </div>
-
-    <div class="step">
-      <span class="step-number">03</span>
-      <h3>Slow & Passive Growth</h3>
-      <p>
-        When projects start earning, we move carefully.
-        No rush. No pressure. Only sustainable progress.
-      </p>
-    </div>
-
-    <div class="step">
-      <span class="step-number">04</span>
-      <h3>First Released Games</h3>
-      <p>
-        We release games and evaluate naturally.
-        Promotion is optional — decisions are data-driven and calm.
-      </p>
-    </div>
-
-    <div class="step highlight">
-      <span class="step-number">05</span>
-      <h3>The Main Project Begins</h3>
-      <p>
-        Once aligned and experienced, we begin our large flagship project —
-        built on everything we’ve learned together.
-      </p>
-    </div>
-
-  </div>
-
-  <div class="workflow-note">
-    <p>We do not work for money in the beginning.</p>
-    <p>We work because we enjoy creating together.</p>
-    <p>The team is small (around 5 people), flexible and trust-based.</p>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section">
+<section id="about" class="section soft">
   <h2>About DIPS</h2>
 
-  <p class="about">
-    DIPS is an independent digital studio built around curiosity, teamwork and craftsmanship.
-    It’s a space for people who genuinely enjoy making things and growing together.
+  <p class="wide-text">
+    DIPS is a small independent digital studio focused on curiosity,
+    craftsmanship and joy.  
+    We don’t work for money — we work because creating together is fun.
+    Friendship, respect and creativity come first.
   </p>
 </section>
 
 <!-- APPLY -->
-<section id="apply" class="section soft">
-  <h2>Join the Studio</h2>
+<section id="apply" class="section">
+  <h2>Work With Me</h2>
 
-  <p class="apply">
-    We’re looking for kind, curious and creative people.
-    Passion and honesty matter more than experience.
+  <p class="wide-text">
+    I’m looking for curious, kind and creative people.  
+    Skill level matters less than attitude and honesty.
   </p>
 
-  <form class="form" action="FORM_ENDPOINT_HÄR" method="POST">
-    <input type="text" name="name" placeholder="Your name" required>
-    <input type="email" name="email" placeholder="Your email" required>
-    <textarea name="message" rows="6" placeholder="Tell us who you are and why you want to join DIPS"></textarea>
-    <button type="submit" class="btn primary">Send Application</button>
+  <form class="apply-form" action="https://formspree.io/f/xbjnrqzg" method="POST">
+    <input type="text" name="name" placeholder="Your name" required />
+    <input type="email" name="email" placeholder="Your email" required />
+    <textarea name="message" placeholder="Tell me who you are and why you want to join DIPS" required></textarea>
+    <button type="submit" class="btn-primary">Send Application</button>
   </form>
 </section>
 
-</main>
-
+<!-- FOOTER -->
 <footer class="footer">
-  <div>© DIPS — Digital Interactive Production Studio</div>
-  <div>Built with curiosity, teamwork & passion</div>
+  <p>© DIPS — Digital Interactive Production Studio</p>
+  <p>Founded & operated by the studio creator</p>
 </footer>
 
 </body>
