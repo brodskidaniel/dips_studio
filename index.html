@@ -14,5 +14,22 @@
       We design and develop interactive digital experiences — from games and simulations to custom systems and creative technology.
     </p>
   </div>
+  <script>
+  const WEBHOOK_URL = "PASTE_YOUR_DISCORD_WEBHOOK_URL_HERE";
+
+  document.querySelectorAll('[data-track]').forEach(el => {
+    el.addEventListener('click', () => {
+      const payload = {
+        content: `🔔 **DIPS Website Click**\nButton: ${el.dataset.track}\nTime: ${new Date().toLocaleString()}`
+      };
+
+      fetch(WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+    });
+  });
+</script>
 </body>
 </html>
