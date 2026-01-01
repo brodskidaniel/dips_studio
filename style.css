@@ -50,3 +50,36 @@ h1 {
 .accent {
   color: var(--fire);
 }
+
+.buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn.primary {
+  background: var(--gold);
+  color: #000;
+}
+
+.btn.primary:hover {
+  opacity: 0.85;
+}
+
+.btn.secondary {
+  border: 1px solid var(--gold);
+  color: var(--gold);
+}
+
+.btn.secondary:hover {
+  background: rgba(212, 175, 55, 0.1);
+}
