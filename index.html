@@ -12,21 +12,21 @@
 <header class="header">
   <div class="header-inner">
 
-    <div class="nav-left">
+    <nav class="nav left">
       <a href="#services">Services</a>
       <a href="#projects">Projects</a>
-    </div>
+    </nav>
 
     <div class="brand" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">
       DIPS
     </div>
 
-    <div class="nav-right">
+    <nav class="nav right">
       <a href="#about">About</a>
-      <a href="https://discord.gg/DIN_INVITE" target="_blank" class="discord-btn">
+      <a href="DISCORD_INVITE_HÄR" target="_blank" class="discord">
         Discord
       </a>
-    </div>
+    </nav>
 
   </div>
 </header>
@@ -34,21 +34,28 @@
 <main>
 
 <section class="hero">
-  <h1>Digital Interactive<br>Production Studio</h1>
+  <div class="hero-inner">
 
-  <p class="hero-text">
-    We build playful, creative and technically solid digital experiences —
-    games, simulations, tools and experimental systems driven by curiosity and skill.
-  </p>
+    <h1>
+      Digital Interactive<br>
+      Production Studio
+    </h1>
 
-  <div class="hero-buttons">
-    <a href="#projects" class="btn primary">View Projects</a>
-    <a href="#apply" class="btn outline">Work With Me</a>
-  </div>
+    <p class="hero-lead">
+      A passion-driven studio focused on building playful, technically solid and
+      meaningful digital experiences — from games and simulations to experimental systems.
+    </p>
 
-  <div class="explore">
-    <span>Explore</span>
-    <div class="arrow"></div>
+    <div class="hero-cta">
+      <a href="#projects" class="btn primary">Explore Projects</a>
+      <a href="#apply" class="btn ghost">Work With Me</a>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="chevron"></div>
+    </div>
+
   </div>
 </section>
 
@@ -58,17 +65,24 @@
   <div class="cards">
     <div class="card">
       <h3>System Development</h3>
-      <p>Custom-built systems with structure, scalability and long-term thinking.</p>
+      <p>
+        Thoughtfully engineered systems built for longevity, experimentation
+        and scalability.
+      </p>
     </div>
 
     <div class="card">
       <h3>Games & Simulations</h3>
-      <p>Interactive worlds and simulations designed to feel alive and meaningful.</p>
+      <p>
+        Interactive worlds, mechanics and simulations designed to feel alive.
+      </p>
     </div>
 
     <div class="card">
       <h3>Creative Technology</h3>
-      <p>Tools, interfaces and experiments that invite curiosity and play.</p>
+      <p>
+        Tools, interfaces and experiments that blend creativity with structure.
+      </p>
     </div>
   </div>
 </section>
@@ -77,52 +91,56 @@
   <h2>Projects & Experiments</h2>
 
   <div class="cards">
-    <div class="card highlight">
+    <div class="card accent">
       <h3>Experimental Systems</h3>
-      <p>Gameplay logic, backend systems and mechanics built for flexibility.</p>
+      <p>
+        Gameplay logic, backend architectures and custom mechanics built for flexibility.
+      </p>
     </div>
 
-    <div class="card highlight">
+    <div class="card accent">
       <h3>Interactive Prototypes</h3>
-      <p>Playable concepts, technical experiments and weird ideas.</p>
+      <p>
+        Rapid concepts and playable experiments exploring new ideas.
+      </p>
     </div>
 
-    <div class="card highlight">
+    <div class="card accent">
       <h3>Internal Tools</h3>
-      <p>Custom tools to speed up and enhance creative workflows.</p>
+      <p>
+        Purpose-built tools that improve creative workflows and iteration speed.
+      </p>
     </div>
   </div>
 </section>
 
 <section id="about" class="section">
-  <h2>Who I Am</h2>
+  <h2>About DIPS</h2>
 
   <p class="about">
-    DIPS is founded and run by a highly driven creator with a deep passion for
-    building interactive systems, games and experimental technology.
-    I care about structure, creativity, curiosity and teamwork —
-    and I build things because I genuinely love the process.
+    DIPS is a small, independent digital studio driven by curiosity, craftsmanship
+    and the joy of building things together.
   </p>
 
   <p class="about">
-    DIPS is not about chasing money.
-    It’s about learning together, creating meaningful projects,
-    becoming better developers and forming real friendships along the way.
+    This is not a company built around money or pressure.
+    It’s a creative space for people who genuinely enjoy making games,
+    systems and experimental technology — and growing together along the way.
   </p>
 </section>
 
 <section id="apply" class="section soft">
-  <h2>Work With Me</h2>
+  <h2>Join the Studio</h2>
 
-  <p class="apply-text">
-    I’m looking for curious, kind and creative people who love building things.
-    You don’t need to be an expert — passion, honesty and willingness to learn matter most.
+  <p class="apply">
+    I’m looking for kind, curious and creative people.
+    You don’t need to be an expert — passion, honesty and a love for building matter more.
   </p>
 
-  <form class="apply-form" action="FORM_ENDPOINT_HÄR" method="POST">
-    <input type="text" name="name" placeholder="Your name" required />
-    <input type="email" name="email" placeholder="Your email" required />
-    <textarea name="message" rows="6" placeholder="Tell me who you are, what you love building, and why you want to join DIPS"></textarea>
+  <form class="form" action="FORM_ENDPOINT_HÄR" method="POST">
+    <input type="text" name="name" placeholder="Your name" required>
+    <input type="email" name="email" placeholder="Your email" required>
+    <textarea name="message" rows="6" placeholder="Tell me who you are, what you enjoy building, and why you want to join DIPS"></textarea>
     <button type="submit" class="btn primary">Send Application</button>
   </form>
 </section>
@@ -131,7 +149,7 @@
 
 <footer class="footer">
   <div>© DIPS — Digital Interactive Production Studio</div>
-  <div>Built with curiosity, passion & creativity</div>
+  <div>Built with curiosity, care & creativity</div>
 </footer>
 
 </body>
