@@ -2,71 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DIPS — Digital Interactive Production Studio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-</head>
 
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar">
-  <nav class="nav-inner">
-    <div class="nav-left">
+<!-- NAV -->
+<header class="nav">
+  <div class="nav-inner">
+    <nav class="nav-left">
       <a href="#services">Services</a>
       <a href="#projects">Projects</a>
       <a href="#teamwork">Teamwork</a>
+    </nav>
+
+    <div class="logo" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">
+      DIPS
     </div>
 
-    <div class="nav-center">
-      <a href="#apply" class="brand">DIPS</a>
-    </div>
-
-    <div class="nav-right">
+    <nav class="nav-right">
       <a href="#about">About</a>
       <a class="btn-outline" href="https://discord.gg/Dd85gp6Vq4" target="_blank">Join Discord</a>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
   <h1>Digital Interactive<br>Production Studio</h1>
-  <p class="hero-sub">
-    A passion-driven studio building playful, technically solid and meaningful
-    digital experiences — games, systems and experimental projects.
+  <p>
+    A passion-driven studio creating playful, experimental and technically solid
+    digital experiences — together.
   </p>
 
-  <div class="hero-actions">
+  <div class="hero-buttons">
     <a href="#projects" class="btn-primary">Explore Projects</a>
     <a href="#apply" class="btn-secondary">Work With Me</a>
   </div>
 
-  <div class="explore">
+  <div class="scroll-indicator">
     <span>Explore</span>
     <div class="arrow"></div>
   </div>
 </section>
 
-<!-- SERVICES -->
+<!-- WHAT WE DO -->
 <section id="services" class="section">
   <h2>What We Do</h2>
 
-  <div class="cards">
+  <div class="card-grid">
     <div class="card">
       <h3>System Development</h3>
-      <p>Scalable, well-structured systems designed for long-term growth and experimentation.</p>
+      <p>Scalable systems built for long-term growth, experimentation and stability.</p>
     </div>
 
     <div class="card">
       <h3>Games & Simulations</h3>
-      <p>Interactive worlds and mechanics built to feel alive, responsive and fun.</p>
+      <p>Interactive worlds, mechanics and simulations designed to feel alive.</p>
     </div>
 
     <div class="card">
       <h3>Creative Technology</h3>
-      <p>Tools, interfaces and experiments blending creativity with structure.</p>
+      <p>Tools and experiments blending creativity with structure and engineering.</p>
     </div>
   </div>
 </section>
@@ -75,20 +77,20 @@
 <section id="projects" class="section alt">
   <h2>Projects & Experiments</h2>
 
-  <div class="cards">
+  <div class="card-grid">
     <div class="card">
       <h3>Experimental Systems</h3>
-      <p>Custom backend logic, gameplay systems and flexible architectures.</p>
+      <p>Custom gameplay logic and backend architectures built for flexibility.</p>
     </div>
 
     <div class="card">
       <h3>Interactive Prototypes</h3>
-      <p>Playable concepts and technical experiments exploring new ideas.</p>
+      <p>Rapid playable concepts exploring new ideas and mechanics.</p>
     </div>
 
     <div class="card">
       <h3>Internal Tools</h3>
-      <p>Purpose-built tools improving creative workflows and iteration speed.</p>
+      <p>Purpose-built tools improving workflow, speed and creative focus.</p>
     </div>
   </div>
 </section>
@@ -100,23 +102,32 @@
   <div class="timeline">
     <div class="step">
       <span>01</span>
-      <p>Get to know each other, communicate smoothly and work without friction.</p>
+      <h4>Getting Along</h4>
+      <p>We learn to communicate, collaborate and work smoothly together.</p>
     </div>
+
     <div class="step">
       <span>02</span>
-      <p>Find team flow — respect pace, solo work or small focused groups.</p>
+      <h4>Finding the Flow</h4>
+      <p>Solo or small teams. Everyone works at their own pace.</p>
     </div>
+
     <div class="step">
       <span>03</span>
-      <p>Slow and passive growth. No rush. No pressure.</p>
+      <h4>Slow Growth</h4>
+      <p>No pressure. No rush. Income comes later — naturally.</p>
     </div>
+
     <div class="step">
       <span>04</span>
-      <p>Release games, observe real players, promote only if needed.</p>
+      <h4>First Releases</h4>
+      <p>Small games released, evaluated and improved with care.</p>
     </div>
+
     <div class="step">
       <span>05</span>
-      <p>Launch the flagship project — built on everything we’ve learned.</p>
+      <h4>Main Project</h4>
+      <p>A large flagship project begins when everything is aligned.</p>
     </div>
   </div>
 </section>
@@ -124,25 +135,25 @@
 <!-- ABOUT -->
 <section id="about" class="section alt">
   <h2>About DIPS</h2>
-  <p class="about-text">
+  <p class="wide-text">
     DIPS is an independent digital studio built around curiosity, teamwork and craftsmanship.
-    We don’t work for money in the beginning — we work because creating together is fun.
-    Trust, respect and long-term friendships matter more than profit.
+    We do not work for money in the beginning — we work because creating together is fun.
+    Friendship, respect and creativity always come first.
   </p>
 </section>
 
 <!-- APPLY -->
 <section id="apply" class="section">
-  <h2>Join the Studio</h2>
-  <p class="apply-text">
-    We’re looking for kind, curious and creative people. You don’t need to be an expert —
-    passion, honesty and love for building matter more.
+  <h2>Work With Me</h2>
+  <p class="wide-text">
+    I’m looking for kind, curious and creative people. Skill level matters less than honesty,
+    passion and the joy of building things together.
   </p>
 
-  <form class="apply-form">
+  <form class="apply-form" action="mailto:your@email.com" method="post" enctype="text/plain">
     <input type="text" placeholder="Your name" required />
     <input type="email" placeholder="Your email" required />
-    <textarea placeholder="Tell us who you are and why you want to join DIPS" required></textarea>
+    <textarea placeholder="Tell me who you are and why you want to join DIPS" required></textarea>
     <button type="submit" class="btn-primary">Send Application</button>
   </form>
 </section>
@@ -150,8 +161,15 @@
 <!-- FOOTER -->
 <footer class="footer">
   <p>© DIPS — Digital Interactive Production Studio</p>
-  <p>Founded & operated by Daniel</p>
+  <p class="visits">Total visits: <span id="counter">0</span></p>
 </footer>
+
+<script>
+  const count = localStorage.getItem("visits") || 0;
+  const newCount = parseInt(count) + 1;
+  localStorage.setItem("visits", newCount);
+  document.getElementById("counter").innerText = newCount;
+</script>
 
 </body>
 </html>
