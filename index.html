@@ -6,29 +6,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <div class="container">
     <h1>DIPS</h1>
+
     <p>Digital Interactive Production Studio</p>
+
     <p class="description">
       We design and develop interactive digital experiences — from games and simulations to custom systems and creative technology.
     </p>
-  </div>
-  <script>
-  const WEBHOOK_URL = "NY_WEBHOOK_URL_HÄR";
-  document.querySelectorAll('[data-track]').forEach(el => {
-    el.addEventListener('click', () => {
-      const payload = {
-        content: `🔔 **DIPS Website Click**\nButton: ${el.dataset.track}\nTime: ${new Date().toLocaleString()}`
-      };
 
-      fetch(WEBHOOK_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
+    <div class="buttons">
+      <a
+        href="https://discord.gg/DIN-INVITE"
+        class="btn primary"
+        target="_blank"
+        data-track="Discord Button"
+      >
+        Discord
+      </a>
+
+      <a
+        href="#projects"
+        class="btn secondary"
+        data-track="Projects Button"
+      >
+        Projects
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const WEBHOOK_URL = "DIN_NYA_WEBHOOK_URL_HÄR";
+
+    document.querySelectorAll("[data-track]").forEach((el) => {
+      el.addEventListener("click", () => {
+        fetch(WEBHOOK_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            content:
+              "🔔 **DIPS Website Click**\n" +
+              "Button: " +
+              el.dataset.track +
+              "\nTime: " +
+              new Date().toLocaleString(),
+          }),
+        });
       });
     });
-  });
-</script>
+  </script>
 </body>
 </html>
