@@ -6,8 +6,9 @@
 
 :root {
     --gold: #d4b04f;
-    --gold-soft: rgba(212,176,79,0.35);
-    --gold-glow: rgba(212,176,79,0.2);
+    --gold-strong: rgba(212,176,79,0.9);
+    --gold-soft: rgba(212,176,79,0.45);
+    --gold-glow: rgba(212,176,79,0.25);
     --bg: #f6f7fb;
     --text: #111;
 }
@@ -35,20 +36,39 @@ body {
 
 .navbar a {
     text-decoration: none;
-    color: var(--text);
-    margin: 0 10px;
     font-weight: 500;
+    color: var(--text);
 }
 
-.logo {
+/* NAV LINKS – GOLD FRAMES */
+.nav-left a,
+.nav-right a {
+    position: relative;
+    padding: 8px 16px;
+    margin: 0 6px;
+    border-radius: 18px;
+    border: 2px solid var(--gold-soft);
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.nav-left a:hover,
+.nav-right a:hover {
+    border-color: var(--gold-strong);
+    background: rgba(212,176,79,0.08);
+    box-shadow:
+        0 0 0 3px var(--gold-glow),
+        inset 0 0 0 1px rgba(212,176,79,0.25);
+}
+
+.nav-center .logo {
     font-weight: 800;
     letter-spacing: 2px;
-}
-
-.discord-btn {
-    border: 1px solid var(--gold);
-    padding: 8px 14px;
-    border-radius: 20px;
+    border: none;
+    padding: 0;
 }
 
 /* ================= HERO ================= */
@@ -95,45 +115,44 @@ body {
     gap: 16px;
 }
 
-.scroll-indicator {
-    margin-top: 50px;
-    font-size: 14px;
-    color: #666;
-}
-
-.scroll-indicator .arrow {
-    width: 14px;
-    height: 14px;
-    border-right: 2px solid #666;
-    border-bottom: 2px solid #666;
-    transform: rotate(45deg);
-    margin: 8px auto 0;
-    animation: bounce 1.6s infinite;
-}
-
-@keyframes bounce {
-    0%,100% { transform: rotate(45deg) translateY(0); }
-    50% { transform: rotate(45deg) translateY(6px); }
-}
-
 /* ================= BUTTONS ================= */
 
 .btn {
-    padding: 12px 26px;
+    padding: 14px 28px;
     border-radius: 30px;
-    text-decoration: none;
     font-weight: 600;
     cursor: pointer;
+    border: 2px solid transparent;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .primary {
     background: var(--gold);
     color: #fff;
+    border-color: var(--gold);
+    box-shadow: 0 8px 24px rgba(212,176,79,0.35);
+}
+
+.primary:hover {
+    background: #c6a240;
+    box-shadow:
+        0 14px 36px rgba(212,176,79,0.45),
+        0 0 0 3px var(--gold-glow);
 }
 
 .secondary {
-    border: 1px solid var(--gold);
+    background: transparent;
     color: var(--gold);
+    border-color: var(--gold);
+}
+
+.secondary:hover {
+    background: rgba(212,176,79,0.08);
+    box-shadow: 0 0 0 3px var(--gold-glow);
 }
 
 .wide {
@@ -181,21 +200,46 @@ body {
 
 .card {
     background: #fff;
-    padding: 30px;
-    border-radius: 20px;
-    border: 1px solid var(--gold-soft);
+    padding: 32px;
+    border-radius: 22px;
+    border: 2px solid var(--gold-soft);
     box-shadow:
-        0 10px 30px rgba(0,0,0,0.05),
+        0 12px 30px rgba(0,0,0,0.06),
         inset 0 0 0 1px rgba(212,176,79,0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-6px);
-    border-color: rgba(212,176,79,0.85);
+    border-color: var(--gold-strong);
     box-shadow:
-        0 20px 40px rgba(0,0,0,0.08),
+        0 24px 45px rgba(0,0,0,0.1),
+        0 0 0 3px var(--gold-glow),
         inset 0 0 0 1px rgba(212,176,79,0.35);
+}
+
+.card h3 {
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.card h3::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        rgba(212,176,79,0.9),
+        rgba(212,176,79,0.4)
+    );
+    border-radius: 2px;
 }
 
 /* ================= TIMELINE ================= */
@@ -210,11 +254,11 @@ body {
 
 .step {
     background: #fff;
-    padding: 22px;
-    border-radius: 16px;
-    border: 1px solid var(--gold-soft);
+    padding: 24px;
+    border-radius: 18px;
+    border: 2px solid var(--gold-soft);
     box-shadow:
-        0 6px 20px rgba(0,0,0,0.05),
+        0 8px 22px rgba(0,0,0,0.05),
         inset 0 0 0 1px rgba(212,176,79,0.18);
 }
 
@@ -231,18 +275,18 @@ body {
 .application-form input,
 .application-form textarea {
     padding: 14px;
-    border-radius: 12px;
-    border: 1px solid #ddd;
+    border-radius: 14px;
+    border: 2px solid rgba(212,176,79,0.25);
     font-family: inherit;
-    background: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .application-form input:focus,
 .application-form textarea:focus {
     outline: none;
-    border-color: rgba(212,176,79,0.9);
+    border-color: var(--gold-strong);
     box-shadow:
-        0 0 0 2px var(--gold-glow),
+        0 0 0 3px var(--gold-glow),
         inset 0 0 0 1px rgba(212,176,79,0.25);
 }
 
