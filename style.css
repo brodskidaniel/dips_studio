@@ -11,10 +11,13 @@
     --gold-strong: rgba(212,176,79,0.9);
     --gold-soft: rgba(212,176,79,0.45);
     --gold-glow: rgba(212,176,79,0.25);
+
     --bg: #f6f7fb;
     --text: #111;
     --muted: #444;
 }
+
+/* ================= BASE ================= */
 
 body {
     font-family: "Inter", sans-serif;
@@ -235,7 +238,6 @@ body {
 
 .text-block p {
     margin-bottom: 22px;
-    line-height: 1.7;
 }
 
 .text-block p:first-child {
@@ -325,12 +327,48 @@ body {
 
 /* ================= FOOTER ================= */
 
-.footer {
-    padding: 40px;
+.footer.dark {
+    background: #0e0e0e;
+    color: #aaa;
+    border-top: 1px solid rgba(212,176,79,0.25);
+}
+
+.footer-inner {
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 20px;
     text-align: center;
-    font-size: 14px;
-    color: #666;
-    border-top: 1px solid var(--gold-soft);
+}
+
+.footer.dark strong {
+    color: #fff;
+}
+
+.footer.dark .counter {
+    margin-top: 6px;
+    font-size: 13px;
+    opacity: 0.85;
+}
+
+.footer-links {
+    margin-top: 18px;
+    font-size: 13px;
+}
+
+.footer-links a {
+    color: var(--gold);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.25s ease;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+.footer-links span {
+    margin: 0 6px;
+    color: #555;
 }
 
 /* ================= SCROLL REVEAL ================= */
