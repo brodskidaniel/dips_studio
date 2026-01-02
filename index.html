@@ -1,175 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DIPS — Digital Interactive Production Studio</title>
-
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>DIPS — Digital Interactive Production Studio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- NAV -->
-<header class="nav">
-  <div class="nav-inner">
-    <nav class="nav-left">
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#teamwork">Teamwork</a>
-    </nav>
-
-    <div class="logo" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">
-      DIPS
+<header class="navbar">
+    <div class="nav-left">
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#teamwork">Teamwork</a>
     </div>
 
-    <nav class="nav-right">
-      <a href="#about">About</a>
-      <a class="btn-outline" href="https://discord.gg/Dd85gp6Vq4" target="_blank">Join Discord</a>
-    </nav>
-  </div>
+    <div class="nav-center">
+        <a href="#apply" class="logo">DIPS</a>
+    </div>
+
+    <div class="nav-right">
+        <a href="#about">About</a>
+        <a class="discord-btn" href="https://discord.gg/Dd85gp6Vq4" target="_blank">Join Discord</a>
+    </div>
 </header>
 
-<!-- HERO -->
+<main>
+
 <section class="hero">
-  <h1>Digital Interactive<br>Production Studio</h1>
-  <p>
-    A passion-driven studio creating playful, experimental and technically solid
-    digital experiences — together.
-  </p>
+    <h1>Digital Interactive<br>Production Studio</h1>
+    <p>
+        A passion-driven studio building playful, creative and technically solid
+        digital experiences — together.
+    </p>
 
-  <div class="hero-buttons">
-    <a href="#projects" class="btn-primary">Explore Projects</a>
-    <a href="#apply" class="btn-secondary">Work With Me</a>
-  </div>
+    <div class="hero-actions">
+        <a href="#projects" class="primary-btn">Explore Projects</a>
+        <a href="#apply" class="secondary-btn">Work With Me</a>
+    </div>
 
-  <div class="scroll-indicator">
-    <span>Explore</span>
-    <div class="arrow"></div>
-  </div>
+    <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="arrow"></div>
+    </div>
 </section>
 
-<!-- WHAT WE DO -->
-<section id="services" class="section">
-  <h2>What We Do</h2>
+<section id="apply" class="apply-section">
+    <div class="apply-container">
 
-  <div class="card-grid">
-    <div class="card">
-      <h3>System Development</h3>
-      <p>Scalable systems built for long-term growth, experimentation and stability.</p>
-    </div>
+        <h2>Work With Me</h2>
+        <p class="apply-intro">
+            I'm looking for kind, curious and creative people.
+            Skill level matters less than honesty, passion and the joy of building things together.
+        </p>
 
-    <div class="card">
-      <h3>Games & Simulations</h3>
-      <p>Interactive worlds, mechanics and simulations designed to feel alive.</p>
-    </div>
+        <form class="apply-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 
-    <div class="card">
-      <h3>Creative Technology</h3>
-      <p>Tools and experiments blending creativity with structure and engineering.</p>
+            <div class="form-row">
+                <input type="text" name="name" placeholder="Your name" required>
+                <input type="email" name="email" placeholder="Your email" required>
+            </div>
+
+            <textarea name="about"
+                placeholder="Who are you? What do you enjoy building? Why do you want to join DIPS?"
+                required></textarea>
+
+            <div class="form-row">
+                <textarea name="strengths"
+                    placeholder="Your strengths (skills, mindset, experience, interests)"></textarea>
+
+                <textarea name="weaknesses"
+                    placeholder="Your weaknesses or areas you want to improve"></textarea>
+            </div>
+
+            <textarea name="extra"
+                placeholder="Anything else you'd like to add? Questions, ideas, availability, thoughts..."></textarea>
+
+            <button type="submit" class="primary-btn submit-btn">
+                Send Application
+            </button>
+
+            <p class="form-note">
+                Your application is sent directly to me.
+                Your email address is never shown publicly.
+            </p>
+
+        </form>
     </div>
-  </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="section alt">
-  <h2>Projects & Experiments</h2>
-
-  <div class="card-grid">
-    <div class="card">
-      <h3>Experimental Systems</h3>
-      <p>Custom gameplay logic and backend architectures built for flexibility.</p>
-    </div>
-
-    <div class="card">
-      <h3>Interactive Prototypes</h3>
-      <p>Rapid playable concepts exploring new ideas and mechanics.</p>
-    </div>
-
-    <div class="card">
-      <h3>Internal Tools</h3>
-      <p>Purpose-built tools improving workflow, speed and creative focus.</p>
-    </div>
-  </div>
-</section>
-
-<!-- TEAMWORK -->
-<section id="teamwork" class="section">
-  <h2>How We Work Together</h2>
-
-  <div class="timeline">
-    <div class="step">
-      <span>01</span>
-      <h4>Getting Along</h4>
-      <p>We learn to communicate, collaborate and work smoothly together.</p>
-    </div>
-
-    <div class="step">
-      <span>02</span>
-      <h4>Finding the Flow</h4>
-      <p>Solo or small teams. Everyone works at their own pace.</p>
-    </div>
-
-    <div class="step">
-      <span>03</span>
-      <h4>Slow Growth</h4>
-      <p>No pressure. No rush. Income comes later — naturally.</p>
-    </div>
-
-    <div class="step">
-      <span>04</span>
-      <h4>First Releases</h4>
-      <p>Small games released, evaluated and improved with care.</p>
-    </div>
-
-    <div class="step">
-      <span>05</span>
-      <h4>Main Project</h4>
-      <p>A large flagship project begins when everything is aligned.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="section alt">
-  <h2>About DIPS</h2>
-  <p class="wide-text">
-    DIPS is an independent digital studio built around curiosity, teamwork and craftsmanship.
-    We do not work for money in the beginning — we work because creating together is fun.
-    Friendship, respect and creativity always come first.
-  </p>
-</section>
-
-<!-- APPLY -->
-<section id="apply" class="section">
-  <h2>Work With Me</h2>
-  <p class="wide-text">
-    I’m looking for kind, curious and creative people. Skill level matters less than honesty,
-    passion and the joy of building things together.
-  </p>
-
-  <form class="apply-form" action="mailto:your@email.com" method="post" enctype="text/plain">
-    <input type="text" placeholder="Your name" required />
-    <input type="email" placeholder="Your email" required />
-    <textarea placeholder="Tell me who you are and why you want to join DIPS" required></textarea>
-    <button type="submit" class="btn-primary">Send Application</button>
-  </form>
-</section>
-
-<!-- FOOTER -->
 <footer class="footer">
-  <p>© DIPS — Digital Interactive Production Studio</p>
-  <p class="visits">Total visits: <span id="counter">0</span></p>
+    <p>© DIPS — Digital Interactive Production Studio</p>
+    <p>Founded & operated by the studio creator</p>
 </footer>
 
-<script>
-  const count = localStorage.getItem("visits") || 0;
-  const newCount = parseInt(count) + 1;
-  localStorage.setItem("visits", newCount);
-  document.getElementById("counter").innerText = newCount;
-</script>
+</main>
 
 </body>
 </html>
