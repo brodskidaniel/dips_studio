@@ -1,100 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>DIPS — Digital Interactive Production Studio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>DIPS — Digital Interactive Production Studio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <header class="navbar">
-    <div class="nav-left">
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#teamwork">Teamwork</a>
-    </div>
+  <div class="nav-left">
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#teamwork">Teamwork</a>
+  </div>
 
-    <div class="nav-center">
-        <a href="#apply" class="logo">DIPS</a>
-    </div>
+  <div class="nav-center">
+    <a href="#apply" class="logo">DIPS</a>
+  </div>
 
-    <div class="nav-right">
-        <a href="#about">About</a>
-        <a class="discord-btn" href="https://discord.gg/Dd85gp6Vq4" target="_blank">Join Discord</a>
-    </div>
+  <div class="nav-right">
+    <a href="#about">About</a>
+    <a href="https://discord.gg/Dd85gp6Vq4" target="_blank" class="discord">Join Discord</a>
+  </div>
 </header>
 
-<main>
-
 <section class="hero">
-    <h1>Digital Interactive<br>Production Studio</h1>
-    <p>
-        A passion-driven studio building playful, creative and technically solid
-        digital experiences — together.
-    </p>
+  <div class="hero-glow"></div>
 
-    <div class="hero-actions">
-        <a href="#projects" class="primary-btn">Explore Projects</a>
-        <a href="#apply" class="secondary-btn">Work With Me</a>
-    </div>
+  <h1>
+    Digital Interactive<br>
+    <span>Production Studio</span>
+  </h1>
 
-    <div class="scroll-indicator">
-        <span>Scroll</span>
-        <div class="arrow"></div>
-    </div>
+  <p class="hero-sub">
+    We build playful, experimental and technically insane digital experiences.<br>
+    Not for money. Not for pressure. For curiosity, joy and mastery.
+  </p>
+
+  <div class="hero-actions">
+    <a href="#projects" class="btn primary">Explore Projects</a>
+    <a href="#apply" class="btn ghost">Work With Me</a>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="chevron"></div>
+  </div>
 </section>
 
-<section id="apply" class="apply-section">
-    <div class="apply-container">
+<section id="services" class="section">
+  <h2 class="section-title">What We Do</h2>
 
-        <h2>Work With Me</h2>
-        <p class="apply-intro">
-            I'm looking for kind, curious and creative people.
-            Skill level matters less than honesty, passion and the joy of building things together.
-        </p>
-
-        <form class="apply-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-
-            <div class="form-row">
-                <input type="text" name="name" placeholder="Your name" required>
-                <input type="email" name="email" placeholder="Your email" required>
-            </div>
-
-            <textarea name="about"
-                placeholder="Who are you? What do you enjoy building? Why do you want to join DIPS?"
-                required></textarea>
-
-            <div class="form-row">
-                <textarea name="strengths"
-                    placeholder="Your strengths (skills, mindset, experience, interests)"></textarea>
-
-                <textarea name="weaknesses"
-                    placeholder="Your weaknesses or areas you want to improve"></textarea>
-            </div>
-
-            <textarea name="extra"
-                placeholder="Anything else you'd like to add? Questions, ideas, availability, thoughts..."></textarea>
-
-            <button type="submit" class="primary-btn submit-btn">
-                Send Application
-            </button>
-
-            <p class="form-note">
-                Your application is sent directly to me.
-                Your email address is never shown publicly.
-            </p>
-
-        </form>
+  <div class="card-grid">
+    <div class="card">
+      <h3>System Development</h3>
+      <p>Robust, scalable and long-term systems built with care and obsession.</p>
     </div>
+
+    <div class="card">
+      <h3>Games & Simulations</h3>
+      <p>Interactive worlds, mechanics and simulations that feel alive.</p>
+    </div>
+
+    <div class="card">
+      <h3>Creative Technology</h3>
+      <p>Tools and experiments that merge structure, creativity and fun.</p>
+    </div>
+  </div>
+</section>
+
+<section id="teamwork" class="section alt">
+  <h2 class="section-title">How We Work Together</h2>
+
+  <div class="timeline">
+    <div class="step"><span>01</span> Get to know each other. Learn communication & trust.</div>
+    <div class="step"><span>02</span> Find flow. Work solo or in small groups.</div>
+    <div class="step"><span>03</span> Grow slowly. No pressure. No rush.</div>
+    <div class="step"><span>04</span> Release small games. Learn from real players.</div>
+    <div class="step"><span>05</span> Start the main flagship project together.</div>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <h2 class="section-title">Projects & Experiments</h2>
+
+  <div class="card-grid">
+    <div class="card highlight">
+      <h3>Experimental Systems</h3>
+      <p>Custom backend, gameplay logic and mechanics.</p>
+    </div>
+
+    <div class="card highlight">
+      <h3>Interactive Prototypes</h3>
+      <p>Playable ideas, rapid experiments and concepts.</p>
+    </div>
+
+    <div class="card highlight">
+      <h3>Internal Tools</h3>
+      <p>Tools that massively speed up creative workflows.</p>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section alt">
+  <h2 class="section-title">About DIPS</h2>
+  <p class="about-text">
+    DIPS is a small independent digital studio driven by curiosity, teamwork and craftsmanship.
+    We don’t work for money — we work because creating together is fun.
+    Friendship, trust and creativity always come first.
+  </p>
+</section>
+
+<section id="apply" class="apply">
+  <div class="apply-box">
+    <h2>Work With Me</h2>
+    <p>
+      Looking for kind, curious and creative people.
+      Skill matters less than mindset, honesty and passion.
+    </p>
+
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+
+      <textarea name="about" placeholder="Who are you and why do you want to join DIPS?" required></textarea>
+
+      <div class="two">
+        <textarea name="strengths" placeholder="Your strengths"></textarea>
+        <textarea name="weaknesses" placeholder="Your weaknesses or areas to improve"></textarea>
+      </div>
+
+      <textarea name="extra" placeholder="Anything else you'd like to add? Questions? Ideas?"></textarea>
+
+      <button type="submit" class="btn primary full">Send Application</button>
+    </form>
+  </div>
 </section>
 
 <footer class="footer">
-    <p>© DIPS — Digital Interactive Production Studio</p>
-    <p>Founded & operated by the studio creator</p>
+  <p>© DIPS — Digital Interactive Production Studio</p>
+  <p>Built with curiosity, obsession and joy</p>
 </footer>
-
-</main>
 
 </body>
 </html>
