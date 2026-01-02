@@ -29,7 +29,7 @@
 
 <main id="top">
 
-<section class="hero">
+<section class="hero section">
     <h1>
         Digital Interactive<br>
         Production Studio
@@ -39,6 +39,10 @@
         A focused digital production studio dedicated to building carefully crafted interactive experiences.
         We combine experimentation with technical precision, approaching each project through collaboration,
         curiosity, and deliberate development.
+    </p>
+
+    <p class="brand-line">
+        Independent · Focused · Built to last
     </p>
 
     <div class="hero-actions">
@@ -155,7 +159,6 @@
         </p>
     </div>
 
-    <!-- FORM MOVED FURTHER DOWN -->
     <form class="application-form" style="margin-top: 80px;">
         <input type="text" placeholder="Your name" required>
         <input type="email" placeholder="Your email" required>
@@ -174,6 +177,28 @@
 <footer class="footer">
     <p>© DIPS — Digital Interactive Production Studio</p>
 </footer>
+
+<script>
+const revealElements = document.querySelectorAll(
+    ".section, .card, .text-block, .application-form"
+);
+
+const observer = new IntersectionObserver(
+    entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("reveal-visible");
+            }
+        });
+    },
+    { threshold: 0.12 }
+);
+
+revealElements.forEach(el => {
+    el.classList.add("reveal-hidden");
+    observer.observe(el);
+});
+</script>
 
 </body>
 </html>
