@@ -4,6 +4,8 @@
     padding: 0;
 }
 
+/* ================= ROOT ================= */
+
 :root {
     --gold: #d4b04f;
     --gold-strong: rgba(212,176,79,0.9);
@@ -27,48 +29,63 @@ body {
     top: 0;
     background: #fff;
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    padding: 16px 40px;
+    grid-template-columns: auto 1fr auto;
+    padding: 14px 40px;
     align-items: center;
     z-index: 10;
     border-bottom: 1px solid var(--gold-soft);
 }
 
-.navbar a {
-    text-decoration: none;
-    font-weight: 500;
-    color: var(--text);
+/* LEFT / RIGHT GROUPS */
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-/* NAV LINKS – GOLD FRAMES */
+/* CENTER LOGO */
+.nav-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* NAV BUTTONS – DISCORD STYLE */
 .nav-left a,
 .nav-right a {
-    position: relative;
-    padding: 8px 16px;
-    margin: 0 6px;
-    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 18px;
+    border-radius: 999px;
     border: 2px solid var(--gold-soft);
+    color: var(--text);
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 1;
     transition:
-        border-color 0.3s ease,
-        box-shadow 0.3s ease,
-        background 0.3s ease,
-        color 0.3s ease;
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.15s ease;
 }
 
 .nav-left a:hover,
 .nav-right a:hover {
     border-color: var(--gold-strong);
     background: rgba(212,176,79,0.08);
-    box-shadow:
-        0 0 0 3px var(--gold-glow),
-        inset 0 0 0 1px rgba(212,176,79,0.25);
+    box-shadow: 0 0 0 3px var(--gold-glow);
+    transform: translateY(-1px);
 }
 
+/* LOGO */
 .nav-center .logo {
     font-weight: 800;
     letter-spacing: 2px;
     border: none;
     padding: 0;
+    box-shadow: none;
 }
 
 /* ================= HERO ================= */
@@ -119,7 +136,7 @@ body {
 
 .btn {
     padding: 14px 28px;
-    border-radius: 30px;
+    border-radius: 999px;
     font-weight: 600;
     cursor: pointer;
     border: 2px solid transparent;
