@@ -22,27 +22,30 @@ body {
     line-height: 1.6;
 }
 
-/* ================= NAVBAR ================= */
+/* ================= NAVBAR (PERFECTLY CENTERED) ================= */
 
 .navbar {
     position: sticky;
     top: 0;
     background: #fff;
     display: flex;
+    justify-content: center;
     align-items: center;
     padding: 14px 40px;
     z-index: 10;
     border-bottom: 1px solid var(--gold-soft);
 }
 
-/* LEFT / RIGHT GROUPS */
+/* ALL NAV CONTENT IN ONE LINE */
 .nav-left,
+.nav-center,
 .nav-right {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
+/* WRAP EVERYTHING */
 .nav-left {
     margin-right: auto;
 }
@@ -80,7 +83,7 @@ body {
     transform: translateY(-1px);
 }
 
-/* ================= DIPS LOGO (CENTERED, GOLD TEXT ONLY) ================= */
+/* ================= LOGO (DIPS CENTERED & LARGER) ================= */
 
 .nav-center {
     position: absolute;
@@ -89,15 +92,16 @@ body {
 }
 
 .nav-center .logo {
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 900;
-    letter-spacing: 4px;
-    color: var(--gold);
+    letter-spacing: 3px;
     text-decoration: none;
-    border: none;
-    padding: 0;
-    background: none;
-    box-shadow: none;
+    color: var(--text);
+    padding: 8px 22px;
+    border-radius: 999px;
+    border: 2px solid var(--gold);
+    box-shadow:
+        0 0 0 3px var(--gold-glow);
 }
 
 /* ================= HERO ================= */
@@ -189,6 +193,7 @@ body {
 .section {
     padding: 100px 60px;
     text-align: center;
+    position: relative;
 }
 
 .section.alt {
