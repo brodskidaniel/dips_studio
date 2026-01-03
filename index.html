@@ -46,7 +46,14 @@
 
     <div class="hero-actions">
         <a href="#projects" class="btn primary">Explore Work</a>
-        <a href="#apply" class="btn secondary">Work With DIPS</a>
+
+        <!-- DISCORD INVITE BUTTON -->
+        <a href="https://discord.gg/Dd85gp6Vq4"
+           target="_blank"
+           rel="noopener"
+           class="btn secondary discord-cta">
+            Join our Discord
+        </a>
     </div>
 </section>
 
@@ -62,18 +69,7 @@
     </div>
 </section>
 
-<section class="section">
-    <h2>What We Believe In</h2>
-
-    <div class="card-grid">
-        <div class="card"><h3>Craft over speed</h3></div>
-        <div class="card"><h3>Systems before features</h3></div>
-        <div class="card"><h3>Clarity over noise</h3></div>
-        <div class="card"><h3>Respectful collaboration</h3></div>
-    </div>
-</section>
-
-<section id="services" class="section alt">
+<section id="services" class="section">
     <h2>What We Do</h2>
 
     <div class="card-grid">
@@ -92,7 +88,7 @@
     </div>
 </section>
 
-<section id="projects" class="section">
+<section id="projects" class="section alt">
     <h2>Projects & Experiments</h2>
 
     <div class="card-grid">
@@ -102,99 +98,30 @@
     </div>
 </section>
 
-<section id="focus" class="section alt">
+<section id="focus" class="section">
     <h2>Current Focus</h2>
 
     <div class="text-block">
-        <p>• Internal system design and scalability<br>
-           • Early-stage interaction experiments<br>
-           • Tooling and workflow refinement</p>
-    </div>
-</section>
-
-<section class="section">
-    <h2>Studio Direction</h2>
-
-    <div class="text-block">
         <p>
-            • Exploration & research<br>
-            • System stabilization<br>
-            • Selective public releases<br>
-            • Long-term flagship development
+            • Internal system design and scalability<br>
+            • Early-stage interaction experiments<br>
+            • Tooling and workflow refinement
         </p>
     </div>
 </section>
 
-<section class="section alt">
-    <h2>How Decisions Are Made</h2>
+<section id="about" class="section alt">
+    <h2>About DIPS</h2>
 
     <div class="text-block">
         <p>
-            Decisions are made through discussion, testing, and long-term evaluation.
-            Authority never replaces clarity.
+            DIPS exists to create a calm, focused space where thoughtful digital work
+            can be built without unnecessary pressure or noise.
         </p>
     </div>
 </section>
 
-<section class="section">
-    <h2>How We Review Work</h2>
-
-    <div class="card-grid">
-        <div class="card"><p>Clarity</p></div>
-        <div class="card"><p>Structure</p></div>
-        <div class="card"><p>Maintainability</p></div>
-        <div class="card"><p>Purpose</p></div>
-    </div>
-</section>
-
-<section class="section alt">
-    <h2>Who We Collaborate With</h2>
-
-    <div class="card-grid">
-        <div class="card"><p>Developers</p></div>
-        <div class="card"><p>Designers</p></div>
-        <div class="card"><p>Technical artists</p></div>
-        <div class="card"><p>System thinkers</p></div>
-    </div>
-</section>
-
-<section class="section">
-    <h2>Who DIPS Is Not For</h2>
-
-    <div class="text-block">
-        <p>
-            • Quick-profit seekers<br>
-            • Responsibility avoiders<br>
-            • Iteration-resistant workflows<br>
-            • Passive contributors
-        </p>
-    </div>
-</section>
-
-<section class="section alt">
-    <h2>Why DIPS Exists</h2>
-
-    <div class="text-block">
-        <p>
-            DIPS exists to create a calm, focused space for thoughtful digital work —
-            without noise, rush, or unnecessary pressure.
-        </p>
-    </div>
-</section>
-
-<section class="section">
-    <h2>Before You Apply</h2>
-
-    <div class="text-block">
-        <p>
-            • No contracts initially<br>
-            • No forced schedules<br>
-            • No hidden expectations
-        </p>
-    </div>
-</section>
-
-<section id="apply" class="section alt">
+<section id="apply" class="section">
     <h2>Work With DIPS</h2>
 
     <form class="application-form">
@@ -217,7 +144,10 @@
         <p>© <span id="year"></span> DIPS — Digital Interactive Production Studio</p>
         <p>Owned & operated by <strong>Thor</strong></p>
         <p class="counter">Total visits: <span id="visitCount">0</span></p>
+
         <div class="footer-links">
+            <a href="https://discord.gg/Dd85gp6Vq4" target="_blank">Discord</a>
+            <span>·</span>
             <a href="/privacy.html">Privacy</a>
             <span>·</span>
             <a href="/terms.html">Terms</a>
@@ -226,18 +156,46 @@
 </footer>
 
 <script>
+/* ================= YEAR ================= */
 document.getElementById("year").textContent = new Date().getFullYear();
 
+/* ================= VISIT COUNTER (LOCAL) ================= */
 const counterKey = "dips_visit_count";
 let visits = localStorage.getItem(counterKey);
 visits = visits ? parseInt(visits) + 1 : 1;
 localStorage.setItem(counterKey, visits);
 document.getElementById("visitCount").textContent = visits;
 
+/* ================= DISCORD TRACKING HOOK ================= */
+/*
+IMPORTANT:
+This sends data to YOUR backend.
+Your backend then sends it to Discord using your bot token or webhook.
+DO NOT put Discord tokens in frontend code.
+*/
+
+fetch("/api/track-visit", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        page: "home",
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent
+    })
+}).catch(() => {
+    /* fail silently */
+});
+
+/* ================= SCROLL REVEAL ================= */
 const revealElements = document.querySelectorAll(".section, .card, .text-block, .application-form");
+
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add("reveal-visible");
+        if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-visible");
+        }
     });
 }, { threshold: 0.12 });
 
