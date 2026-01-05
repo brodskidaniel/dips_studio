@@ -32,11 +32,13 @@ body {
 
 /* ================= SCROLLBAR ================= */
 
+/* Firefox */
 * {
     scrollbar-width: thin;
     scrollbar-color: var(--gold) #f0f0f0;
 }
 
+/* WebKit */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -172,26 +174,19 @@ body {
 
 .hero-actions {
     display: flex;
-    gap: 14px;
+    gap: 16px;
     margin-top: 36px;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 /* ================= BUTTONS ================= */
 
 .btn {
     padding: 14px 28px;
-    min-height: 48px;
     border-radius: 999px;
     font-weight: 600;
     border: 2px solid transparent;
     cursor: pointer;
     text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
     transition:
         background 0.3s ease,
         box-shadow 0.3s ease,
@@ -225,37 +220,13 @@ body {
     box-shadow: 0 0 0 3px var(--gold-glow);
 }
 
-.ghost,
-.hero-actions a:not(.btn) {
-    background: rgba(212,176,79,0.04);
-    color: var(--gold);
-    border: 2px solid rgba(212,176,79,0.35);
-    padding: 14px 28px;
-    border-radius: 999px;
-    font-weight: 600;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition:
-        background 0.25s ease,
-        border-color 0.25s ease,
-        box-shadow 0.25s ease,
-        transform 0.15s ease;
+.wide {
+    width: 100%;
 }
 
-.ghost:hover,
-.hero-actions a:not(.btn):hover {
-    background: rgba(212,176,79,0.12);
-    border-color: var(--gold-strong);
-    box-shadow: 0 0 0 3px var(--gold-glow);
-    transform: translateY(-1px);
-}
+/* DISCORD CTA – subtle attention */
 
 .discord-cta {
-    background: transparent;
-    color: var(--gold);
-    border-color: var(--gold);
     position: relative;
 }
 
@@ -274,10 +245,6 @@ body {
     30% { opacity: 0.6; }
     60% { opacity: 0; transform: scale(1.05); }
     100% { opacity: 0; }
-}
-
-.wide {
-    width: 100%;
 }
 
 /* ================= SECTIONS ================= */
@@ -310,6 +277,7 @@ body {
 .section h2 {
     font-size: 36px;
     margin-bottom: 50px;
+    letter-spacing: -0.3px;
 }
 
 /* ================= TEXT BLOCK ================= */
@@ -317,6 +285,14 @@ body {
 .text-block {
     max-width: 760px;
     margin: auto;
+}
+
+.text-block p {
+    margin-bottom: 22px;
+}
+
+.text-block p:first-child {
+    font-weight: 500;
 }
 
 /* ================= CARDS ================= */
@@ -332,11 +308,46 @@ body {
     padding: 30px;
     border-radius: 22px;
     border: 2px solid var(--gold-soft);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.06),
+        inset 0 0 0 1px rgba(212,176,79,0.15);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-6px);
+    border-color: var(--gold-strong);
+    box-shadow:
+        0 24px 45px rgba(0,0,0,0.1),
+        0 0 0 3px var(--gold-glow);
+}
+
+/* ================= FORMS ================= */
+
+.application-form {
+    max-width: 720px;
+    margin: 90px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.application-form input,
+.application-form textarea {
+    padding: 14px;
+    border-radius: 14px;
+    border: 2px solid rgba(212,176,79,0.25);
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.application-form input:focus,
+.application-form textarea:focus {
+    outline: none;
+    border-color: var(--gold-strong);
     box-shadow: 0 0 0 3px var(--gold-glow);
 }
 
@@ -355,9 +366,68 @@ body {
     text-align: center;
 }
 
+.footer.dark strong {
+    color: #fff;
+}
+
+.footer.dark .counter {
+    margin-top: 6px;
+    font-size: 13px;
+    opacity: 0.85;
+}
+
+.footer-links {
+    margin-top: 18px;
+    font-size: 13px;
+}
+
+.footer-links a {
+    color: var(--gold);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.25s ease;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+.footer-links span {
+    margin: 0 6px;
+    color: #555;
+}
+
+/* ================= SCROLL REVEAL ================= */
+
+.reveal-hidden {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .nav-left a,
+    .nav-right a {
+        padding: 6px 14px;
+        font-size: 14px;
+    }
+
+    .nav-center .logo {
+        font-size: 22px;
+        letter-spacing: 3px;
+    }
+
     .hero h1 {
         font-size: 38px;
     }
@@ -365,9 +435,37 @@ body {
     .section {
         padding: 80px 24px;
     }
+}
 
-    .hero-actions .btn,
-    .hero-actions a {
+/* ======================================================= */
+/* ===================== ADDITIONS ======================== */
+/* ======================================================= */
+
+/* Ghost button – lågprioriterad CTA som matchar systemet */
+.btn.ghost {
+    background: transparent;
+    color: var(--gold);
+    border-color: var(--gold-soft);
+}
+
+.btn.ghost:hover {
+    background: rgba(212,176,79,0.08);
+    border-color: var(--gold-strong);
+    box-shadow: 0 0 0 3px var(--gold-glow);
+    transform: translateY(-1px);
+}
+
+/* Valfri CTA-wrapper (används endast om du lägger den i HTML) */
+.cta-group {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Mobil – endast ghost påverkas */
+@media (max-width: 768px) {
+    .btn.ghost {
         width: 100%;
         max-width: 320px;
     }
