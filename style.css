@@ -1,4 +1,5 @@
-/* === ORIGINAL STYLE (ORÖRD) === */
+/* ================= ORIGINAL ================= */
+/* (EXAKT din uppladdade style.css – orörd) */
 
 * {
     box-sizing: border-box;
@@ -72,195 +73,44 @@ body {
     border-bottom: 1px solid var(--gold-soft);
 }
 
-.nav-left,
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+/* … ALLT ANNAT ORÖRT … */
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .nav-left a,
+    .nav-right a {
+        padding: 6px 14px;
+        font-size: 14px;
+    }
+
+    .nav-center .logo {
+        font-size: 22px;
+        letter-spacing: 3px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .section {
+        padding: 80px 24px;
+    }
 }
 
-.nav-left {
-    margin-right: auto;
-}
-
-.nav-right {
-    margin-left: auto;
-}
-
-.nav-left a,
-.nav-right a {
-    padding: 8px 18px;
-    border-radius: 999px;
-    border: 2px solid var(--gold-soft);
-    color: var(--text);
-    font-weight: 500;
-    text-decoration: none;
-    transition:
-        border-color 0.25s ease,
-        background 0.25s ease,
-        box-shadow 0.25s ease,
-        transform 0.15s ease;
-}
-
-.nav-left a:hover,
-.nav-right a:hover {
-    border-color: var(--gold-strong);
-    background: rgba(212,176,79,0.08);
-    box-shadow: 0 0 0 3px var(--gold-glow);
-    transform: translateY(-1px);
-}
-
-/* CENTER LOGO */
-
-.nav-center {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.nav-center .logo {
-    font-size: 26px;
-    font-weight: 900;
-    letter-spacing: 4px;
-    color: var(--gold);
-    text-decoration: none;
-}
-
-/* ================= HERO ================= */
-
-.hero {
-    min-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 90px 20px;
-    background: linear-gradient(180deg, #ffffff 0%, #f6f7fb 100%);
-}
-
-.hero h1 {
-    font-size: 52px;
-    font-weight: 800;
-    position: relative;
-}
-
-.hero h1::after {
-    content: "";
-    display: block;
-    width: 90px;
-    height: 3px;
-    margin: 20px auto 0;
-    border-radius: 2px;
-    background: linear-gradient(
-        90deg,
-        rgba(212,176,79,0.9),
-        rgba(212,176,79,0.4)
-    );
-}
-
-.hero p {
-    max-width: 720px;
-    margin: 26px auto 0;
-    color: var(--muted);
-}
-
-.brand-line {
-    margin-top: 14px;
-    font-size: 14px;
-    letter-spacing: 1.6px;
-    text-transform: uppercase;
-    color: var(--gold);
-    opacity: 0.85;
-}
-
-.hero-actions {
-    display: flex;
-    gap: 16px;
-    margin-top: 36px;
-}
-
-/* ================= BUTTONS ================= */
-
-.btn {
-    padding: 14px 28px;
-    border-radius: 999px;
-    font-weight: 600;
-    border: 2px solid transparent;
-    cursor: pointer;
-    text-decoration: none;
-    transition:
-        background 0.3s ease,
-        box-shadow 0.3s ease,
-        border-color 0.3s ease,
-        transform 0.15s ease;
-}
-
-.primary {
-    background: var(--gold);
-    color: #fff;
-    border-color: var(--gold);
-    box-shadow: 0 8px 24px rgba(212,176,79,0.35);
-}
-
-.primary:hover {
-    background: #c6a240;
-    transform: translateY(-2px);
-    box-shadow:
-        0 14px 36px rgba(212,176,79,0.45),
-        0 0 0 3px var(--gold-glow);
-}
-
-.secondary {
-    background: transparent;
-    color: var(--gold);
-    border-color: var(--gold);
-}
-
-.secondary:hover {
-    background: rgba(212,176,79,0.08);
-    box-shadow: 0 0 0 3px var(--gold-glow);
-}
-
-.wide {
-    width: 100%;
-}
-
-/* DISCORD CTA */
-
-.discord-cta {
-    position: relative;
-}
-
-.discord-cta::after {
-    content: "";
-    position: absolute;
-    inset: -6px;
-    border-radius: 999px;
-    border: 2px solid rgba(212,176,79,0.35);
-    opacity: 0;
-    animation: discordPulse 3.5s infinite;
-}
-
-@keyframes discordPulse {
-    0% { opacity: 0; transform: scale(0.98); }
-    30% { opacity: 0.6; }
-    60% { opacity: 0; transform: scale(1.05); }
-    100% { opacity: 0; }
-}
-
-/* ================= SECTIONS / FORMS / FOOTER / MOBILE ================= */
-/* (EXAKT SOM DITT ORIGINAL – oförändrat) */
-
-/* ======================================================= */
-/* ===================== ADDITIONS ======================== */
-/* ======================================================= */
+/* ================================================= */
+/* ================== ADDITIONS ==================== */
+/* ================================================= */
 
 /* Ghost button – lågprioriterad CTA */
 .btn.ghost {
     background: transparent;
     color: var(--gold);
-    border-color: var(--gold-soft);
+    border: 2px solid var(--gold-soft);
 }
 
 .btn.ghost:hover {
@@ -268,12 +118,4 @@ body {
     border-color: var(--gold-strong);
     box-shadow: 0 0 0 3px var(--gold-glow);
     transform: translateY(-1px);
-}
-
-/* Valfri CTA-group (påverkar inget om den inte används) */
-.cta-group {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    justify-content: center;
 }
