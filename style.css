@@ -176,6 +176,8 @@ body {
     display: flex;
     gap: 16px;
     margin-top: 36px;
+    flex-wrap: wrap; /* ADD: keeps buttons cohesive on smaller widths */
+    justify-content: center;
 }
 
 /* ================= BUTTONS ================= */
@@ -187,6 +189,10 @@ body {
     border: 2px solid transparent;
     cursor: pointer;
     text-decoration: none;
+    display: inline-flex; /* ADD */
+    align-items: center;  /* ADD */
+    justify-content: center; /* ADD */
+    gap: 8px; /* ADD */
     transition:
         background 0.3s ease,
         box-shadow 0.3s ease,
@@ -218,6 +224,22 @@ body {
 .secondary:hover {
     background: rgba(212,176,79,0.08);
     box-shadow: 0 0 0 3px var(--gold-glow);
+}
+
+/* ADD: Ghost button for visual hierarchy */
+
+.ghost {
+    background: rgba(212,176,79,0.06);
+    color: var(--gold);
+    border-color: rgba(212,176,79,0.35);
+    backdrop-filter: blur(4px);
+}
+
+.ghost:hover {
+    background: rgba(212,176,79,0.12);
+    border-color: var(--gold-strong);
+    box-shadow: 0 0 0 3px var(--gold-glow);
+    transform: translateY(-1px);
 }
 
 .wide {
@@ -434,5 +456,10 @@ body {
 
     .section {
         padding: 80px 24px;
+    }
+
+    .hero-actions .btn {
+        width: 100%; /* ADD: stacked buttons on mobile */
+        max-width: 320px;
     }
 }
