@@ -168,3 +168,29 @@ document.getElementById("visitCount").textContent = visits;
 
 fetch("/api/track-visit", {
     method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+        page: "home",
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent
+    })
+}).catch(() => {});
+
+const revealElements = document.querySelectorAll(".section, .card, .text-block, .application-form");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-visible");
+        }
+    });
+}, { threshold: 0.12 });
+
+revealElements.forEach(el => {
+    el.classList.add("reveal-hidden");
+    observer.observe(el);
+});
+</script>
+
+</body>
+</html>
