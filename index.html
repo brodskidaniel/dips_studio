@@ -47,7 +47,10 @@
     <div class="hero-actions">
         <a href="#projects" class="btn primary">Explore Work</a>
 
-        <!-- DISCORD INVITE BUTTON -->
+        <a href="#services" class="btn secondary">What We Build</a>
+
+        <a href="#apply" class="btn ghost">Collaborate</a>
+
         <a href="https://discord.gg/Dd85gp6Vq4"
            target="_blank"
            rel="noopener"
@@ -69,7 +72,18 @@
     </div>
 </section>
 
-<section id="services" class="section">
+<section class="section">
+    <h2>Studio Stats</h2>
+
+    <div class="card-grid">
+        <div class="card"><h3>10+ Years</h3><p>Combined development experience</p></div>
+        <div class="card"><h3>Systems First</h3><p>Architecture before visuals</p></div>
+        <div class="card"><h3>Low Noise</h3><p>Minimal meetings, high output</p></div>
+        <div class="card"><h3>Experimental</h3><p>R&D driven production mindset</p></div>
+    </div>
+</section>
+
+<section id="services" class="section alt">
     <h2>What We Do</h2>
 
     <div class="card-grid">
@@ -88,6 +102,17 @@
     </div>
 </section>
 
+<section class="section">
+    <h2>How We Work</h2>
+
+    <div class="card-grid">
+        <div class="card"><p>• Define systems before visuals</p></div>
+        <div class="card"><p>• Prototype fast, refine slowly</p></div>
+        <div class="card"><p>• Favor clarity over speed</p></div>
+        <div class="card"><p>• Build things meant to last</p></div>
+    </div>
+</section>
+
 <section id="projects" class="section alt">
     <h2>Projects & Experiments</h2>
 
@@ -98,7 +123,20 @@
     </div>
 </section>
 
-<section id="focus" class="section">
+<section class="section">
+    <h2>Direction & Roadmap</h2>
+
+    <div class="text-block">
+        <p>
+            • Expanding internal frameworks<br>
+            • Selective external collaborations<br>
+            • Long-form experimental projects<br>
+            • Publishing tools & insights over time
+        </p>
+    </div>
+</section>
+
+<section id="focus" class="section alt">
     <h2>Current Focus</h2>
 
     <div class="text-block">
@@ -110,7 +148,7 @@
     </div>
 </section>
 
-<section id="about" class="section alt">
+<section id="about" class="section">
     <h2>About DIPS</h2>
 
     <div class="text-block">
@@ -118,6 +156,16 @@
             DIPS exists to create a calm, focused space where thoughtful digital work
             can be built without unnecessary pressure or noise.
         </p>
+    </div>
+</section>
+
+<section class="section alt">
+    <h2>FAQ</h2>
+
+    <div class="card-grid">
+        <div class="card"><p><strong>Are you a company or collective?</strong><br>DIPS operates as an independent studio.</p></div>
+        <div class="card"><p><strong>Do you take client work?</strong><br>Only selectively, aligned with our focus.</p></div>
+        <div class="card"><p><strong>Can I collaborate?</strong><br>Yes — skill, mindset and intent matter.</p></div>
     </div>
 </section>
 
@@ -135,6 +183,16 @@
 
         <button type="submit" class="btn primary wide">Send Application</button>
     </form>
+</section>
+
+<section class="section alt">
+    <h2>Stay Connected</h2>
+
+    <div class="hero-actions">
+        <a href="https://discord.gg/Dd85gp6Vq4" class="btn primary" target="_blank">Discord</a>
+        <a href="#projects" class="btn secondary">View Work</a>
+        <a href="#apply" class="btn ghost">Collaborate</a>
+    </div>
 </section>
 
 </main>
@@ -156,39 +214,24 @@
 </footer>
 
 <script>
-/* ================= YEAR ================= */
 document.getElementById("year").textContent = new Date().getFullYear();
 
-/* ================= VISIT COUNTER (LOCAL) ================= */
 const counterKey = "dips_visit_count";
 let visits = localStorage.getItem(counterKey);
 visits = visits ? parseInt(visits) + 1 : 1;
 localStorage.setItem(counterKey, visits);
 document.getElementById("visitCount").textContent = visits;
 
-/* ================= DISCORD TRACKING HOOK ================= */
-/*
-IMPORTANT:
-This sends data to YOUR backend.
-Your backend then sends it to Discord using your bot token or webhook.
-DO NOT put Discord tokens in frontend code.
-*/
-
 fetch("/api/track-visit", {
     method: "POST",
-    headers: {
-        "Content-Type": "application/json"
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
         page: "home",
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent
     })
-}).catch(() => {
-    /* fail silently */
-});
+}).catch(() => {});
 
-/* ================= SCROLL REVEAL ================= */
 const revealElements = document.querySelectorAll(".section, .card, .text-block, .application-form");
 
 const observer = new IntersectionObserver(entries => {
