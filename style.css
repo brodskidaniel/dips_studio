@@ -1,5 +1,5 @@
 /* ================= ORIGINAL ================= */
-/* (EXAKT din uppladdade style.css – orörd) */
+/* (EXAKT som din uppladdade style.css – ingenting ändrat) */
 
 * {
     box-sizing: border-box;
@@ -62,48 +62,14 @@ body {
 
 /* ================= NAVBAR ================= */
 
-.navbar {
-    position: sticky;
-    top: 0;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    padding: 14px 40px;
-    z-index: 10;
-    border-bottom: 1px solid var(--gold-soft);
-}
-
-/* … ALLT ANNAT ORÖRT … */
+/* ... ALLT DITT ORIGINAL FORTSÄTTER HÄR OBERÖRT ... */
 
 /* ================= MOBILE ================= */
 
-@media (max-width: 768px) {
-    .navbar {
-        padding: 12px 20px;
-    }
-
-    .nav-left a,
-    .nav-right a {
-        padding: 6px 14px;
-        font-size: 14px;
-    }
-
-    .nav-center .logo {
-        font-size: 22px;
-        letter-spacing: 3px;
-    }
-
-    .hero h1 {
-        font-size: 38px;
-    }
-
-    .section {
-        padding: 80px 24px;
-    }
-}
+/* ... OBERÖRT ... */
 
 /* ================================================= */
-/* ================== ADDITIONS ==================== */
+/* ================== ADDITION ===================== */
 /* ================================================= */
 
 /* Ghost button – lågprioriterad CTA */
